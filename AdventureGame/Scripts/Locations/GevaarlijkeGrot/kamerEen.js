@@ -1,0 +1,64 @@
+﻿(function () {
+    'use strict';
+
+    adventureGame.locations.register(function kamerEen() {
+        var location = {
+            name: 'De kamer van de ork',
+            fileLocation: 'GevaarlijkeGrot/KamerEen',
+            enemies: new adventureGame.Collection(
+                adventureGame.enemies.ork
+        //        adventureGame.enemies.goblin
+            ),
+            items: new adventureGame.Collection(
+                adventureGame.items.blackKey
+            ),
+            destinations: new adventureGame.Collection([
+                {
+                    text: 'Noord',
+                    target: adventureGame.locations.gangRechts,
+                    barrier: {
+                        text: 'Houten deur',
+                        actions: {
+                            inspect:
+                            {
+                                text: 'Onderzoek de deur',
+                                action: adventureGame.actions.inspect({ text: 'Een eikenhouten deur met een ijzeren hendel. De deur is niet op slot.' })
+                            },
+                            open:
+                            {
+                                text: 'Open de deur',
+                                action: adventureGame.actions.open({
+                                    success: function (game, destination) {
+                                        game.logLocation('Je opent de eikenhouten deur.');
+                                        destination.text = 'Gang (noord)';
+                                    }
+                                })
+                            }
+                        }
+                    }
+                },
+                {
+                    text: 'Tweede deur (west)',
+                    target: adventureGame.locations.middenKamer,
+                },
+                {
+                    text: 'Derde deur (zuid)',
+                    target: adventureGame.locations.linkerKamer
+                },
+                {
+                    text: 'Deuropening (oost); richting ingang',
+                    target: adventureGame.locations.linkergang
+                }
+
+            ]),
+            actions: {
+            }
+        };
+
+        //location.enemies.ork.name = 'Gruumsh';
+
+        return location;
+    });
+})();
+
+// vechten heeft nog geen effect op de ork

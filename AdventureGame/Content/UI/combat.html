@@ -1,0 +1,13 @@
+﻿<fieldset ng-if="enemiesPresent()">
+    <legend>Vijanden</legend>
+    <ul class="inline button-row">
+        <li ng-repeat="enemy in game.currentLocation.enemies">
+            <button type="button" class="btn btn-danger" ng-click="executeAction(fight, enemy)">{{ 'Val ' + enemy.name + ' aan!' }}</button>
+        </li>
+    </ul>
+    <ul class="inline button-row">
+        <li ng-repeat="action in game.currentLocation.combatActions">
+            <button type="button" class="btn" ng-class="getButtonClass(action)" ng-click="executeAction(action.action)">{{ action.text }}</button>
+        </li>
+    </ul>
+</fieldset>
