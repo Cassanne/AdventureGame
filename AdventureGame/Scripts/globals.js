@@ -1,4 +1,5 @@
-﻿var adventureGame = adventureGame || {};
+﻿/// <reference path="_references.js" />
+var adventureGame = adventureGame || {};
 
 (function (game) {
     'use strict';
