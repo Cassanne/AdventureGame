@@ -58,8 +58,17 @@
             }
         }
 
-        self.all = function () {
-            return _functions;
+        self.allObjects = function () {
+            var objects = [];
+
+            for (var n in _functions) {
+                var func = _functions[n];
+                var entity = func();
+                entity.id = func.name;
+                objects.push(entity);
+            }
+
+            return objects;
         }
 
     }

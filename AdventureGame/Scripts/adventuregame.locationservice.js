@@ -49,8 +49,8 @@
         function addEnemy() {
             var args = [].slice.apply(arguments);
             var originalFunction = args.shift();
+            combatService.addFleeAction(game.currentLocation, 1);
             originalFunction.apply(this, args);
-            combatService.addFleeAction(game.currentLocation);
         }
 
         function initWorld() {

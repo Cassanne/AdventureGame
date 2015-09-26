@@ -1,6 +1,6 @@
 ﻿var adventureGame = adventureGame || {};
 
-(function () {
+(function (game) {
     'use strict';
 
     if (Function.prototype.name === undefined) {
@@ -25,9 +25,9 @@
         }
     }
 
-    adventureGame.isEmpty = function (object, property) {
+    game.isEmpty = function (object, property) {
         var objectToCheck = property ? object[property] : object;
         return objectToCheck ? Object.keys(objectToCheck).length == 0 : true;
     }
 
-})();
+})(adventureGame);
