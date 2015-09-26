@@ -57,7 +57,7 @@
                 game.logAction('Je verslaat de ' + enemy.name + '!');
                 game.logLocation('Er ligt hier een dode ' + enemy.name + ', door jou verslagen.');
 
-                if (enemy.items && enemy.items.any) {
+                if (enemy.items && enemy.items.length) {
                     enemy.items.forEach(function (item) {
                         game.currentLocation.items.push(item);
                     });
