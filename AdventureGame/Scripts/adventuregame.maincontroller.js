@@ -1,4 +1,5 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function () {
     'use strict';
 
     angular.module('adventureGame').controller('maincontroller', ['$scope', 'gameService', 'characterService', 'game', function ($scope, gameService, characterService, game) {

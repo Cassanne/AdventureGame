@@ -1,4 +1,5 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function () {
     'use strict';
 
     angular.module('adventureGame').factory('dataService', ['$q', '$http', '$localStorage', 'game', function ($q, $http, $localStorage, game) {

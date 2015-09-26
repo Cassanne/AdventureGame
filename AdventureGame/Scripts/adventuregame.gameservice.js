@@ -1,4 +1,5 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function () {
     'use strict';
 
     angular.module('adventureGame').factory('gameService', ['dataService', 'locationService', 'characterService', 'combatService', 'game', function (dataService, locationService, characterService, combatService, game) {
