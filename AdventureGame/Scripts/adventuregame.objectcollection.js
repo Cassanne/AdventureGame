@@ -1,4 +1,4 @@
-﻿/// <reference path="../../_references.js" />
+﻿/// <reference path="_references.js" />
 (function (game) {
     'use strict';
 
@@ -31,14 +31,10 @@
             }
 
             if (Array.prototype.find) {
-                return Array.prototype.find.call(self, function (x) {
-                    return x.id == id || (x.target && x.target == id || (typeof x.target == 'function' && x.target.name == id));
-                });
+                return Array.prototype.find.call(self, matchById(id));
             }
             else {
-                return Array.prototype.filter.call(self, function (x) {
-                    return x.id == id || (x.target && x.target == id || (typeof x.target == 'function' && x.target.name == id));
-                })[0];
+                return Array.prototype.filter.call(self, matchById(id))[0];
             }
         };
 
@@ -47,9 +43,7 @@
                 id = id.name;
             }
 
-            return Array.prototype.filter.call(self, function (x) {
-                return x.name == id || (x.target && x.target == id || (typeof x.target == 'function' && x.target.name == id));
-            })[0];
+            return Array.prototype.filter.call(self, matchById(id));
         }
 
         self.remove = function (item) {
@@ -78,5 +72,12 @@
         }
 
         return self;
+
+        function matchById(id) {
+            return function (x) {
+                return x.id == id || (x.target && x.target == id || (typeof x.target == 'function' && x.target.name == id));
+            }
+        }
     };
+
 })(adventureGame);
