@@ -41,20 +41,23 @@
             }
 
             if (Array.prototype.find) {
-                return Array.prototype.find.call(_functions, function (x) {
+                result = Array.prototype.find.call(_functions, function (x) {
                     return x.name == id;
-                })();
+                });
             }
             else {
-                return Array.prototype.filter.call(_functions, function (x) {
+                result = Array.prototype.filter.call(_functions, function (x) {
                     return x.name == id;
-                })[0]();
+                })[0];
             }
+
+            return getObject(result);
         };
 
         self.forEach = function (func) {
             for (var n in _functions) {
-                func(_functions[n]);
+                var entity = getObject(_functions[n]);
+                func(entity);
             }
         }
 
@@ -62,13 +65,18 @@
             var objects = [];
 
             for (var n in _functions) {
-                var func = _functions[n];
-                var entity = func();
-                entity.id = func.name;
-                objects.push(entity);
+                objects.push(getObject(_functions[n]));
             }
 
             return objects;
+        }
+
+        return self;
+
+        function getObject(func) {
+            var entity = func();
+            entity.id = func.name;
+            return entity;
         }
 
     }

@@ -58,9 +58,7 @@
             var world = new game.Collection();
 
             // Execute all definitions to build a pristine world.
-            game.locations.forEach(function (definition) {
-                var location = definition();
-                location.id = definition.name;
+            game.locations.forEach(function (location) {
                 world.push(location);
 
                 // Warn if a location has no destinations. This is not an error, as destinations can be
