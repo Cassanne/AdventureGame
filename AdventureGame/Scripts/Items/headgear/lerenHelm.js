@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function lerenHelm() {
+    game.items.register(function lerenHelm() {
         return {
             name: 'Helm van leer',
             defense: 1,
@@ -9,6 +10,6 @@
         };
     });
 
-})();
+})(adventureGame);
 
 // helm geeft een +1 op je defense

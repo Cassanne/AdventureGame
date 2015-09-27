@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.flee = function (settings) {
+    game.actions.flee = function (settings) {
         return {
             text: settings.text || 'Vluchten!',
             type: 'fight',
@@ -26,7 +27,7 @@
             }
         }
     }
-})();
+})(adventureGame);
 
 // het wordt ofwel een difficulty die van de vijanden afhangt, of een opposed check (vijanden rollen een attack). Als vijanden winnen krijg je het effect van de attack (damage dus)
 // succes betekent dat je van locatie wisselt

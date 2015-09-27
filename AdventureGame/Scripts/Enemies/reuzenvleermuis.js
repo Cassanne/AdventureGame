@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.enemies.register(function reuzenvleermuis() {
+    game.enemies.register(function reuzenvleermuis() {
         return {
             name: 'Reuzenvleermuis',
             hitpoints: 7,
@@ -11,4 +12,4 @@
         };
     });
 
-})();
+})(adventureGame);

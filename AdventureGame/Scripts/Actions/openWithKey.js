@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.openWithKey = function (settings) {
+    game.actions.openWithKey = function (settings) {
         return function (game, destination, barrier, action) {
             // Todo: remove the key used from the character's inventory.
 
@@ -12,4 +13,4 @@
             }
         }
     }
-})();
+})(adventureGame);

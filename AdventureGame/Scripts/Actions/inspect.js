@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.inspect = function (settings) {
+    game.actions.inspect = function (settings) {
         return function (game, destination, barrier, action) {
             for (var n in barrier.actions) {
                 var currentAction = barrier.actions[n];
@@ -24,4 +25,4 @@
         }
     }
 
-})();
+})(adventureGame);

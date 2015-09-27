@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.unlock = function (settings) {
+    game.actions.unlock = function (settings) {
         return {
             text: settings.text || 'Slot openen',
             type: 'skill',
@@ -22,7 +23,7 @@
         }
     }
 
-})();
+})(adventureGame);
 
 //deze button moet active blijven, behalve bij een critical fail misschien. Dus een extra setting, kan dat? 
 // Of kunnen we bijvoorbeeld drie pogingen geven voor hij inactive wordt?

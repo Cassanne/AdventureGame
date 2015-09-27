@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function zwaard() {
+    game.items.register(function zwaard() {
         return {
             name: 'Zwaard',
             damage: 3,
@@ -9,4 +10,4 @@
         };
     });
 
-})();
+})(adventureGame);

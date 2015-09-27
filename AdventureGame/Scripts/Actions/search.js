@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.search = function (settings) {
+    game.actions.search = function (settings) {
         var text = settings.text || 'Zoek';
 
         return {
@@ -33,7 +34,7 @@
         }
     }
 
-})();
+})(adventureGame);
 
 // Na het uitvoeren van de check moet de button inactive worden
 // hoe en waar gaan items hierin meegerekend worden?

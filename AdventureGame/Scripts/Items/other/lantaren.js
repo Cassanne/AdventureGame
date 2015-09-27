@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function lantaren() {
+    game.items.register(function lantaren() {
         return {
             name: 'Lantaren',
             perception: 1,
@@ -9,6 +10,6 @@
         };
     });
 
-})();
+})(adventureGame);
 
 // lantaren geeft je een +1 op je search & unlock result

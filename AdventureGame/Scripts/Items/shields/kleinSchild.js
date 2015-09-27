@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function kleinSchild() {
+    game.items.register(function kleinSchild() {
         return {
             name: 'Klein schild',
             defense: 2,
@@ -9,5 +10,5 @@
         };
     });
 
-})();
+})(adventureGame);
 

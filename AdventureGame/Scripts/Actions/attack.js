@@ -1,8 +1,9 @@
 ﻿// Todo: is not used anywhere. Remove?
-(function () {
+/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.attack = function (settings) {
+    game.actions.attack = function (settings) {
         return {
             text: settings.text || 'Val aan!',
             type: 'fight',
@@ -21,7 +22,7 @@
         }
     }
 
-})();
+})(adventureGame);
 
 // hier moeten we iets aangeven over wat de vijand is. check voor enemy, dan is hij active
 // is characterDamage nu (kracht) d6 + (oplettendheid)? volgens mij gaat dat nog niet goed, iig niet de oplettendheid optellen

@@ -1,17 +1,18 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.enemies.register(function trol() {
+    game.enemies.register(function trol() {
         return {
             name: 'Trol',
             hitpoints: 20,
             attack: '2d6',
             reward: 2,
-            items: new adventureGame.Collection
+            items: new game.Collection
             (
-                adventureGame.items.healingPotion
+                game.items.healingPotion
             )
         };
     });
 
-})();
+})(adventureGame);

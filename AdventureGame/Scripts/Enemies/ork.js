@@ -1,17 +1,18 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.enemies.register(function ork() {
+    game.enemies.register(function ork() {
         return {
             name: 'Ork',
             hitpoints: 12,
             attack: '2d4+1',
             reward: 1,
-            items: new adventureGame.Collection
+            items: new game.Collection
         (
-            adventureGame.items.ijzerHelm
+            game.items.ijzerHelm
         )
         };
     });
 
-})();
+})(adventureGame);

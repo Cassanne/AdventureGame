@@ -1,14 +1,15 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function blackKey() {
+    game.items.register(function blackKey() {
         return {
             name: 'Black key',
             description: 'This black iron key has a gargoyle figurine on it.',
             open: function (game) {
                 return {
                     text: 'Open de deur met de zwarte sleutel',
-                    action: adventureGame.actions.openWithKey({
+                    action: game.actions.openWithKey({
                         success: function (game, destination) {
                             game.logLocation('Je opent de deur.');
                             destination.text = 'Donkere kamer';
@@ -18,4 +19,4 @@
             }
         };
     });
-})();
+})(adventureGame);

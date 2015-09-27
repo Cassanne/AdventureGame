@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.heal = function (settings) {
+    game.actions.heal = function (settings) {
         return function (game, item) {
             var healed = game.rollDice(settings.potency);
             game.character.currentHitpoints += healed;
@@ -15,4 +16,4 @@
             }
         }
     }
-})();
+})(adventureGame);

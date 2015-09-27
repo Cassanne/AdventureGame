@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.open = function (settings) {
+    game.actions.open = function (settings) {
         return function (game, destination, barrier, action) {
             delete destination.barrier;
 
@@ -11,4 +12,4 @@
         }
     }
 
-})();
+})(adventureGame);

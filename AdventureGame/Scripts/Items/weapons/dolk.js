@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function dolk() {
+    game.items.register(function dolk() {
         return {
             name: 'Dolk',
             damage: 1,
@@ -9,6 +10,6 @@
         };
     });
 
-})();
+})(adventureGame);
 
 // dolk geeft je een +1 op je damage result

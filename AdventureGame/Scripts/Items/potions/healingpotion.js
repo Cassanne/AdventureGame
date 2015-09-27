@@ -1,13 +1,14 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function healingPotion() {
+    game.items.register(function healingPotion() {
         return {
             name: 'Toverdrank',
-            use: adventureGame.actions.heal({
+            use: game.actions.heal({
                 potency: '1d8'
             })
         };
     });
 
-})();
+})(adventureGame);

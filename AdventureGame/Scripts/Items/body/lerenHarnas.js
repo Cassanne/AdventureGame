@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function lerenHarnas() {
+    game.items.register(function lerenHarnas() {
         return {
             name: 'Harnas van leer',
             defense: 2,
@@ -9,4 +10,4 @@
         };
     });
 
-})();
+})(adventureGame);

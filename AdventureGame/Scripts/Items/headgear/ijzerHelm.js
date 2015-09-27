@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.items.register(function ijzerHelm() {
+    game.items.register(function ijzerHelm() {
         return {
             name: 'Helm van ijzer',
             defense: 2,
@@ -9,4 +10,4 @@
         };
     });
 
-})();
+})(adventureGame);

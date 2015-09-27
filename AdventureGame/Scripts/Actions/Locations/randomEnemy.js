@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.actions.randomEnemy = function (game) {
+    game.actions.randomEnemy = function (game) {
         var allEnemies = game.enemies.allObjects();
 
         var randomEnemy = allEnemies[game.rollDice('1d' + allEnemies.length) - 1];
@@ -9,4 +10,4 @@
 
         return randomEnemy;
     }
-})();
+})(adventureGame);
