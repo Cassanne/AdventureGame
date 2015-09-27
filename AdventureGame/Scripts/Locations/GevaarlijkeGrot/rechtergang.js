@@ -1,25 +1,26 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function rechtergang() {
+    game.locations.register(function rechtergang() {
         var location = {
             name: 'Een schemerige gang',
             fileLocation: 'GevaarlijkeGrot/Rechtergang',
-            enemies: new adventureGame.Collection([
-                adventureGame.enemies.reuzenvleermuis
+            enemies: new game.Collection([
+                game.enemies.reuzenvleermuis
             ]),
-            destinations: new adventureGame.Collection(
+            destinations: new game.Collection(
                 {
                     text: 'Richting het licht',
-                    target: adventureGame.locations.kaarsGrot
+                    target: game.locations.kaarsGrot
                 },
                 {
                     text: 'Richting ingang',
-                    target: adventureGame.locations.ingang
+                    target: game.locations.ingang
                 }
             ),
             actions: {
-                zoek: adventureGame.actions.search({
+                zoek: game.actions.search({
                     difficulty: 8,
                     success: function (game) {
                         game.logLocation('Je ruikt de geur van brandende kaarsen.')
@@ -34,4 +35,4 @@
         return location;
     });
 
-})();
+})(adventureGame);

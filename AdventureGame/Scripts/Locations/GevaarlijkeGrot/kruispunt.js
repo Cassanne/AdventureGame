@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function kruispunt() {
+    game.locations.register(function kruispunt() {
         var location = {
             name: 'Een kruispunt',
             fileLocation: 'GevaarlijkeGrot/Kruispunt',
@@ -15,22 +16,22 @@
                     }
                 }
             },
-            destinations: new adventureGame.Collection(
+            destinations: new game.Collection(
                 {
                     text: 'Donkere tunnel (oost)',
-                    target: adventureGame.locations.donkereGang
+                    target: game.locations.donkereGang
                 },
                 {
                     text: 'Nog niet! Gang (noord)',
-                    target: adventureGame.locations.temp
+                    target: game.locations.temp
                 },
                 {
                     text: 'Donkere tunnel (west)',
-                    target: adventureGame.locations.kruisingWest
+                    target: game.locations.kruisingWest
                 },
                 {
                     text: 'Gang (zuid)',
-                    target: adventureGame.locations.gangRechts
+                    target: game.locations.gangRechts
                 }
             ),
             actions: {
@@ -41,6 +42,6 @@
         return location;
     });
 
-})();
+})(adventureGame);
 
 //na zoek-check moet die button verdwijnen

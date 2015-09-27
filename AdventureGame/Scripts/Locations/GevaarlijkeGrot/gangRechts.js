@@ -1,18 +1,19 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function gangRechts() {
+    game.locations.register(function gangRechts() {
         var location = {
             name: 'Een gemetselde gang',
             fileLocation: 'GevaarlijkeGrot/GangRechts',
-            destinations: new adventureGame.Collection(
+            destinations: new game.Collection(
                 {
                     text: 'Naar het kruispunt (noord)',
-                    target: adventureGame.locations.kruispunt
+                    target: game.locations.kruispunt
                 },
                 {
                     text: 'Door de houten deur (zuid)',
-                    target: adventureGame.locations.kamerEen
+                    target: game.locations.kamerEen
                 }
             ),
             actions: {
@@ -23,7 +24,7 @@
         return location;
     });
 
-})();
+})(adventureGame);
 
 
 //SANNE: hier gaat in het spel iets mis. Beide destinations gaan naar kamerEen.

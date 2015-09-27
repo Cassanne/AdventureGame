@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function gewonnen() {
+    game.locations.register(function gewonnen() {
         var location = {
             name: 'Gewonnen!',
             fileLocation: 'GevaarlijkeGrot/Gewonnen',
@@ -19,6 +20,6 @@
         return location;
     });
 
-})();
+})(adventureGame);
 
 //deze moet vervangen worden door een modal, ipv een locatie. Maar misschien zijn er meerdere eindes, dus even over nadenken nog.

@@ -25,13 +25,13 @@
             addFleeAction(location);
         }
 
-        function addFleeAction(location, modifier) {
+        function addFleeAction(location, newNumberOfEnemies) {
             // If there are enemies and the character is quick enough, add a flee action.
-            if (isNaN(modifier)) {
-                modifier = 0;
+            if (isNaN(newNumberOfEnemies)) {
+                newNumberOfEnemies = 0;
             }
 
-            if (location.enemies && location.enemies.length < (modifier ? game.character.vlugheid + modifier : game.character.vlugheid)) {
+            if ((newNumberOfEnemies && newNumberOfEnemies < game.character.vlugheid) || (location.enemies && location.enemies.length > 0 && location.enemies.length < game.character.vlugheid)) {
                 if (!location.combatActions) {
                     location.combatActions = {};
                 }

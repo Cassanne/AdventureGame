@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function ingang() {
+    game.locations.register(function ingang() {
         var location = {
             name: 'De grot',
             // Example
@@ -10,10 +11,10 @@
             //},
             //navigationDisabled: true,
             fileLocation: 'GevaarlijkeGrot/Ingang',
-            items: new adventureGame.Collection(
-                adventureGame.items.lantaren,
-                adventureGame.items.healingPotion,
-                adventureGame.items.zwaard
+            items: new game.Collection(
+                game.items.lantaren,
+                game.items.healingPotion,
+                game.items.zwaard
             ),
             events: {
                 scentBlood: function (game) {
@@ -22,18 +23,18 @@
                     }
                 }
             },
-            destinations: new adventureGame.Collection(
+            destinations: new game.Collection(
                 {
                     text: 'Donkere gang (west)',
-                    target: adventureGame.locations.linkergang
+                    target: game.locations.linkergang
                 },
                 {
                     text: 'Schemerige gang (oost)',
-                    target: adventureGame.locations.rechtergang
+                    target: game.locations.rechtergang
                 }
             ),
             actions: {
-                zoek: adventureGame.actions.search({
+                zoek: game.actions.search({
                     difficulty: 5,
                     success: function (game) {
                         game.logLocation('Op de muur staat een pijl, getekend met bloed. Hij wijst naar de rechtergang.')
@@ -48,6 +49,6 @@
         return location;
     });
 
-})();
+})(adventureGame);
 
 //na zoek-check moet die button verdwijnen

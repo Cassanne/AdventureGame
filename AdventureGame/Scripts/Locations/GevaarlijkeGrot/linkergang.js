@@ -1,7 +1,8 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function linkergang() {
+    game.locations.register(function linkergang() {
         var location = {
             name: 'Een pikdonkere gang',
             fileLocation: 'GevaarlijkeGrot/Linkergang',
@@ -31,11 +32,11 @@
                         game.currentLocation.destinations.push(
                             {
                                 text: 'Dieper de grot in',
-                                target: adventureGame.locations.deurEen
+                                target: game.locations.deurEen
                             },
                             {
                                 text: 'Richting ingang',
-                                target: adventureGame.locations.ingang
+                                target: game.locations.ingang
                             }
                         );
 
@@ -43,7 +44,7 @@
                     }
                 },
 
-                zoek: adventureGame.actions.search({
+                zoek: game.actions.search({
                     text: 'Doorzoek de kuil',
                     difficulty: 9,
                     success: function (game) {
@@ -60,7 +61,7 @@
         return location;
     });
 
-})();
+})(adventureGame);
 
 // je moet 'kracht' 5 rollen om uit de valkuil te klimmen. Hier nog een check van maken. 
 // Hier aangepaste resultaten als je een lichtbron (lantaren) hebt.

@@ -1,18 +1,19 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function linkerKamer() {
+    game.locations.register(function linkerKamer() {
         var location = {
             name: 'De slaapkamer van de orks',
             fileLocation: 'GevaarlijkeGrot/LinkerKamer',
-            enemies: new adventureGame.Collection(
-                adventureGame.enemies.ork,
-                adventureGame.enemies.goblin
+            enemies: new game.Collection(
+                game.enemies.ork,
+                game.enemies.goblin
             ),
-            destinations: new adventureGame.Collection(
+            destinations: new game.Collection(
                 {
                     text: 'De kamer van de ork',
-                    target: adventureGame.locations.kamerEen
+                    target: game.locations.kamerEen
                 }
             ),
             actions: {
@@ -22,6 +23,6 @@
         return location;
     });
 
-})();
+})(adventureGame);
 
 // de twee tegenstanders vallen nog niet tegelijk aan. Ik zou ze unieke namen kunnen geven

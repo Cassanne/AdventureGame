@@ -1,18 +1,19 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function middenKamer() {
+    game.locations.register(function middenKamer() {
         var location = {
             name: 'Een opslagkamer',
             fileLocation: 'GevaarlijkeGrot/MiddenKamer',
-            destinations: new adventureGame.Collection(
+            destinations: new game.Collection(
                 {
                     text: 'De kamer van de ork',
-                    target: adventureGame.locations.kamerEen
+                    target: game.locations.kamerEen
                 }
             ),
             actions: {
-                zoek: adventureGame.actions.search({
+                zoek: game.actions.search({
                     difficulty: 9,
                     success: function (game) {
                         game.logLocation('Je vindt een schild!');
@@ -28,6 +29,6 @@
         return location;
     });
 
-})();
+})(adventureGame);
 
 // nog een item toevoegen om te vinden. bij voorkeur healing potion

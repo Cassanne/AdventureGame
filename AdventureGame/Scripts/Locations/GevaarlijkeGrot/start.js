@@ -1,19 +1,20 @@
-﻿(function () {
+﻿/// <reference path="_references.js" />
+(function (game) {
     'use strict';
 
-    adventureGame.locations.register(function start() {
+    game.locations.register(function start() {
         var location = {
             name: 'De ingang van de Gevaarlijke Grot',
             fileLocation: 'GevaarlijkeGrot/Start',
-            destinations: new adventureGame.Collection(
+            destinations: new game.Collection(
                 {
                     text: 'Ga de grot in',
-                    target: adventureGame.locations.ingang,
+                    target: game.locations.ingang,
                 }
 
             ),
             actions: {
-                zoek: adventureGame.actions.search({
+                zoek: game.actions.search({
                     difficulty: 10,
                     success: function (game) {
                         game.logLocation('Aan de achterkant van het waarschuwingsbord staan enkele runen in de taal van de orken en trollen. Je kan deze taal helaas niet lezen. Het lijkt erop dat er bloed gebruikt is als inkt.')
@@ -28,6 +29,6 @@
         return location;
     });
 
-})();
+})(adventureGame);
 
 //willen we hier nog een knop 'remake character' oid? En een 'go home' (voor de humor)?
