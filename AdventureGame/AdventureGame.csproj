@@ -120,15 +120,16 @@
     <Content Include="Scripts\Actions\openWithKey.js" />
     <Content Include="Scripts\Actions\search.js" />
     <Content Include="Scripts\Actions\unlock.js" />
-    <Content Include="Scripts\adventuregame.characterservice.js" />
-    <Content Include="Scripts\adventuregame.combatservice.js" />
-    <Content Include="Scripts\adventuregame.dataservice.js" />
-    <Content Include="Scripts\adventuregame.definitioncollection.js" />
-    <Content Include="Scripts\adventuregame.gameservice.js" />
-    <Content Include="Scripts\adventuregame.locationservice.js" />
-    <Content Include="Scripts\adventuregame.maincontroller.js" />
-    <Content Include="Scripts\adventuregame.module.js" />
-    <Content Include="Scripts\adventuregame.objectcollection.js" />
+    <Content Include="Scripts\Engine\adventuregame.characterservice.js" />
+    <Content Include="Scripts\Engine\adventuregame.combatservice.js" />
+    <Content Include="Scripts\Engine\adventuregame.dataservice.js" />
+    <Content Include="Scripts\Engine\adventuregame.definitioncollection.js" />
+    <Content Include="Scripts\Engine\adventuregame.gameservice.js" />
+    <Content Include="Scripts\Engine\adventuregame.locationservice.js" />
+    <Content Include="Scripts\Engine\adventuregame.maincontroller.js" />
+    <Content Include="Scripts\Engine\adventuregame.module.js" />
+    <Content Include="Scripts\Engine\adventuregame.objectcollection.js" />
+    <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\Enemies\goblin.js" />
@@ -162,7 +163,10 @@
     <Content Include="Scripts\Locations\GevaarlijkeGrot\start.js" />
     <Content Include="Scripts\Locations\GevaarlijkeGrot\temp.js" />
     <Content Include="Scripts\ngStorage.js" />
+    <Content Include="chutzpah.json" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\Tests\adventuregame.gameservicetest.js" />
+    <Content Include="Scripts\Tests\adventuregame.objectcollection.tests.js" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Web.config" />
@@ -192,7 +196,9 @@
     <Folder Include="Scripts\Items\feet\" />
     <Folder Include="Scripts\Items\legs\" />
     <Folder Include="Scripts\Items\rings\" />
-    <Folder Include="Scripts\Tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

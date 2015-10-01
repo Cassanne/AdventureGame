@@ -1,0 +1,17 @@
+﻿{
+    "Framework": "jasmine",
+    "References": [
+        { "Path": "Scripts/angular.js" },
+        { "Path": "Scripts/angular-sanitize.js" },
+        { "Path": "Scripts/angular-mocks.js" },
+        { "Path": "Scripts/ngStorage.js" },
+        { "Path": "Scripts/globals.js" },
+        { "Path": "Scripts/Engine/adventuregame.definitioncollection.js" },
+        { "Path": "Scripts/Engine/adventuregame.objectcollection.js" },
+        { "Path": "Scripts/Engine/adventuregame.module.js" },
+        { "Path": "Scripts/Engine" }
+    ],
+    "Tests": [
+        { "Path": "Scripts/Tests" }
+    ]
+}

@@ -1,5 +1,5 @@
-﻿// Todo: is not used anywhere. Remove?
-/// <reference path="_references.js" />
+﻿/// <reference path="../_references.js" />
+// Todo: is not used anywhere. Remove?
 (function (game) {
     'use strict';
 
