@@ -26,5 +26,3 @@
 
 })(adventureGame);
 
-
-//SANNE: hier gaat in het spel iets mis. Beide destinations gaan naar kamerEen.

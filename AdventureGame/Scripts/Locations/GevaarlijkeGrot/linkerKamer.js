@@ -24,5 +24,3 @@
     });
 
 })(adventureGame);
-
-// de twee tegenstanders vallen nog niet tegelijk aan. Ik zou ze unieke namen kunnen geven

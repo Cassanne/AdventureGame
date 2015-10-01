@@ -59,5 +59,3 @@
         return location;
     });
 })(adventureGame);
-
-// vechten heeft nog geen effect op de ork

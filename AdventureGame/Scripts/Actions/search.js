@@ -35,6 +35,3 @@
     }
 
 })(adventureGame);
-
-// Na het uitvoeren van de check moet de button inactive worden
-// hoe en waar gaan items hierin meegerekend worden?

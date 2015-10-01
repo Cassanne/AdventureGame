@@ -43,5 +43,3 @@
     });
 
 })(adventureGame);
-
-//na zoek-check moet die button verdwijnen

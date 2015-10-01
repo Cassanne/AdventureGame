@@ -12,4 +12,3 @@
 
 })(adventureGame);
 
-// helm geeft een +1 op je defense

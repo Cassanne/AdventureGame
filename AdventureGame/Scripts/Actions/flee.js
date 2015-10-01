@@ -28,7 +28,3 @@
         }
     }
 })(adventureGame);
-
-// het wordt ofwel een difficulty die van de vijanden afhangt, of een opposed check (vijanden rollen een attack). Als vijanden winnen krijg je het effect van de attack (damage dus)
-// succes betekent dat je van locatie wisselt
-// deze moet active worden als er een vijand / gevecht op deze locatie is

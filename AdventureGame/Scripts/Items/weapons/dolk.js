@@ -11,5 +11,3 @@
     });
 
 })(adventureGame);
-
-// dolk geeft je een +1 op je damage result

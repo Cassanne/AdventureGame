@@ -63,6 +63,5 @@
 
 })(adventureGame);
 
-// De destination 'west' hier moet pas beschikbaar zijn na succesvolle skill-check (1 van de drie). Item sleutel nog maken, of sleutel-actie?
+
 // Schoppen moet ook een effect krijgen (een status?) bijv. dat de orks dan alert zijn, of dat sneaken niet meer kan
-// Kan ik de sleutel een effect laten hebben op de 'open het slot' actie? Of kan ik dat beter vanuit het item regelen?

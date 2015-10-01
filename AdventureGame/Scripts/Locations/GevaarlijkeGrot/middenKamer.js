@@ -30,5 +30,3 @@
     });
 
 })(adventureGame);
-
-// nog een item toevoegen om te vinden. bij voorkeur healing potion

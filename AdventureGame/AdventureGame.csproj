@@ -111,7 +111,6 @@
     <Content Include="Content\UI\level-up.html" />
     <Content Include="Content\UI\victory.html" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\Actions\attack.js" />
     <Content Include="Scripts\Actions\flee.js" />
     <Content Include="Scripts\Actions\heal.js" />
     <Content Include="Scripts\Actions\inspect.js" />
@@ -150,7 +149,6 @@
     <Content Include="Scripts\Locations\GevaarlijkeGrot\deurEen.js" />
     <Content Include="Scripts\Locations\GevaarlijkeGrot\donkereGang.js" />
     <Content Include="Scripts\Locations\GevaarlijkeGrot\gangRechts.js" />
-    <Content Include="Scripts\Locations\GevaarlijkeGrot\gewonnen.js" />
     <Content Include="Scripts\Locations\GevaarlijkeGrot\ingang.js" />
     <Content Include="Scripts\Locations\GevaarlijkeGrot\kaarsGrot.js" />
     <Content Include="Scripts\Locations\GevaarlijkeGrot\kamerEen.js" />
